@@ -4,7 +4,7 @@ echo "--- 🐶 Running pre-commit linting... ---"
 
 npm run lint
 
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]; then
   echo "--- ❌ ESLint found errors. Fix them and try again. ---"
   exit 1
 fi
