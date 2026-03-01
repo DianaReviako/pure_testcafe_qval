@@ -1,0 +1,17 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+REGEXP="AB#[0-9]+"
+
+echo "--- 📝 Checking commit message format... ---"
+
+if ! echo "$COMMIT_MSG" | grep -iqE "$REGEXP"; then
+  echo "--- ❌ ERROR: Invalid commit message format! ---"
+  echo "Your message: \"$COMMIT_MSG\""
+  echo "Required format: AB#1234 (must include 'AB#' followed by numbers)"
+  exit 1
+fi
+
+echo "--- ✅ Message format is correct! ---"
