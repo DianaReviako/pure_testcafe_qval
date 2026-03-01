@@ -1,9 +1,20 @@
 {
   "scripts": {
     "test": "node run.js",
-    "test:checkboxes": "npx testcafe chrome tests/checkboxes.js --test-meta tag=C39"
+    "test:checkboxes": "npx testcafe chrome tests/checkboxes.js --test-meta tag=C39",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "testcafe": "^3.7.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.2",
+    "eslint-plugin-mocha": "^11.2.0",
+    "eslint-plugin-testcafe": "^0.2.1",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7"
   }
 }
