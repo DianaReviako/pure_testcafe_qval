@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "node run.js",
+    "test:checkboxes": "npx testcafe chrome tests/checkboxes.js --test-meta tag=C39"
+  },
+  "dependencies": {
+    "testcafe": "^3.7.3"
+  }
+}
